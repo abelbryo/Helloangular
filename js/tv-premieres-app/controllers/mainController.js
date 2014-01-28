@@ -3,9 +3,14 @@ app.controller("mainController", function($scope, $http) {
     $scope.apiKey = "600d5c56de4f60c73ea49855370daa30";
     $scope.results = [];
     $scope.filterText = null;
+<<<<<<< HEAD
     $scope.availableGenres = [];
     $scope.genreFilter = null;
 
+=======
+    $scope.genreFilter = null;
+    $scope.availableGenres = [];
+>>>>>>> c4e9c5b01a47745c49104d33e485a8aae5885a94
 
     $scope.init = function() {
         var today = new Date();
@@ -15,11 +20,11 @@ app.controller("mainController", function($scope, $http) {
         $http.jsonp($scope.URL)
         .success(function(data) {
             angular.forEach(data, function(value, index) {
-                var date = value.date; 
+                var date = value.date;
 
                 // Add each episodes to results array
                 angular.forEach(value.episodes, function(tvshow, index){
-                   tvshow.date = date; 
+                   tvshow.date = date;
                    $scope.results.push(tvshow);
                    
                    // loop through each genre
