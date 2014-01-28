@@ -3,14 +3,8 @@ app.controller("mainController", function($scope, $http) {
     $scope.apiKey = "600d5c56de4f60c73ea49855370daa30";
     $scope.results = [];
     $scope.filterText = null;
-<<<<<<< HEAD
-    $scope.availableGenres = [];
-    $scope.genreFilter = null;
-
-=======
     $scope.genreFilter = null;
     $scope.availableGenres = [];
->>>>>>> c4e9c5b01a47745c49104d33e485a8aae5885a94
 
     $scope.init = function() {
         var today = new Date();
