@@ -5,6 +5,10 @@ app.controller("mainController", function($scope, $http) {
     $scope.filterText = null;
     $scope.genreFilter = null;
     $scope.availableGenres = [];
+    $scope.orderFields = ["Air Date", "Rating"];
+    $scope.orderDirections = ["Descending", "Ascendinng"];
+    $scope.orderField = "Air Date"; 
+    $scope.orderReverse = false;
 
     $scope.init = function() {
         var today = new Date();
